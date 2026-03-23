@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nato's Café — Guadalajara</title>
+  <meta name="description" content="Nato's Café, café de especialidad en Guadalajara, Jalisco. Espresso, lattes, cold brew y más. Av. Fray Antonio Alcalde 1043, Cinépolis La Normal.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="no-scroll is-loading">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================ -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader__content">
+      <div class="preloader__logo">
+        <span class="preloader__logo-n">N</span><span class="preloader__logo-dot">·</span><span class="preloader__logo-c">C</span>
+      </div>
+      <div class="preloader__tagline">Café de Especialidad</div>
+    </div>
+    <div class="preloader__bottom">
+      <div class="preloader__bar-wrap">
+        <div class="preloader__bar" id="preloader-bar"></div>
+      </div>
+      <div class="preloader__counter" id="preloader-counter">0%</div>
+    </div>
+    <div class="preloader__mask" id="preloader-mask"></div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" data-scroll-to="hero" aria-label="Nato's Café inicio">
+        <span>N</span><span class="nav__logo-dot">·</span><span>C</span>
+      </a>
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#menu" class="nav__link btn-magnetic" data-scroll-to="menu">
+          <span>Menú</span>
+        </a>
+        <a href="#about" class="nav__link btn-magnetic" data-scroll-to="about">
+          <span>Nosotros</span>
+        </a>
+        <a href="#contact" class="nav__link btn-magnetic" data-scroll-to="contact">
+          <span>Visítanos</span>
+        </a>
+      </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Navegación móvil">
+      <a href="#menu" class="mobile-menu__link" data-scroll-to="menu">
+        <span class="mobile-menu__num">01</span>
+        <span class="mobile-menu__text">Menú</span>
+      </a>
+      <a href="#about" class="mobile-menu__link" data-scroll-to="about">
+        <span class="mobile-menu__num">02</span>
+        <span class="mobile-menu__text">Nosotros</span>
+      </a>
+      <a href="#contact" class="mobile-menu__link" data-scroll-to="contact">
+        <span class="mobile-menu__num">03</span>
+        <span class="mobile-menu__text">Visítanos</span>
+      </a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <span>@natoscafes</span>
+      <span>Guadalajara, Jalisco</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="smooth-content">
+
+    <!-- 1. HERO -->
+    <section class="section section--hero" id="hero">
+      <div class="hero__bg-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1800&q=80"
+          alt=""
+          class="hero__bg"
+          aria-hidden="true"
+          fetchpriority="high">
+        <div class="hero__overlay" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__eyebrow" data-anim="eyebrow">
+          <span>Guadalajara</span>
+          <span class="hero__eyebrow-sep">·</span>
+          <span>Jalisco</span>
+        </div>
+        <h1 class="hero__heading">
+          <span class="hero__line-wrap">
+            <span class="hero__line" data-anim="line">El café</span>
+          </span>
+          <span class="hero__line-wrap">
+            <span class="hero__line hero__line--italic" data-anim="line">que buscabas</span>
+          </span>
+          <span class="hero__line-wrap">
+            <span class="hero__line" data-anim="line">todo este tiempo.</span>
+          </span>
+        </h1>
+        <div class="hero__cta" data-anim="cta">
+          <a href="#menu" class="btn btn--primary btn-magnetic" data-scroll-to="menu">
+            <span>Explorar Menú</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-label">Scroll</span>
+      </div>
+    </section>
+
+    <!-- 2. MARQUEE STRIP -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-row marquee-row--right">
+        <div class="marquee__inner" id="marquee-1">
+          <span class="marquee__item">Café Especial</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Espresso</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Latte</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Cold Brew</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Guadalajara</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Café Especial</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Espresso</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Latte</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Cold Brew</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Guadalajara</span><span class="marquee__sep">·</span>
+        </div>
+      </div>
+      <div class="marquee-row marquee-row--left">
+        <div class="marquee__inner marquee__inner--reverse" id="marquee-2">
+          <span class="marquee__item">@natoscafes</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Cappuccino</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Matcha</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Frappé</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Croissant</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">@natoscafes</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Cappuccino</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Matcha</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Frappé</span><span class="marquee__sep">·</span>
+          <span class="marquee__item">Croissant</span><span class="marquee__sep">·</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. CARD STACK (Experience) — Skiper UI signature -->
+    <section class="section section--experience" id="experience">
+      <div class="experience__sticky-hint" aria-hidden="true">
+        <span>Desliza</span>
+      </div>
+      <div class="stack-card" data-card="1">
+        <div class="stack-card__inner">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80"
+            alt="Nuestra Historia"
+            class="stack-card__bg"
+            loading="lazy">
+          <div class="stack-card__overlay"></div>
+          <div class="stack-card__content">
+            <div class="stack-card__overline">
+              <span>01</span>
+            </div>
+            <h2 class="stack-card__heading">
+              <span class="stack-card__line-wrap"><span class="stack-card__line">Nuestra</span></span>
+              <span class="stack-card__line-wrap"><span class="stack-card__line stack-card__line--italic">Historia</span></span>
+            </h2>
+            <p class="stack-card__body">Nacimos en Guadalajara con una sola obsesión: el café perfecto. Desde 2019, cada taza es un acto de amor.</p>
+          </div>
+          <div class="stack-card__number" aria-hidden="true">01</div>
+        </div>
+      </div>
+
+      <div class="stack-card" data-card="2">
+        <div class="stack-card__inner">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600&q=80"
+            alt="Nuestro Café"
+            class="stack-card__bg"
+            loading="lazy">
+          <div class="stack-card__overlay"></div>
+          <div class="stack-card__content">
+            <div class="stack-card__overline">
+              <span>02</span>
+            </div>
+            <h2 class="stack-card__heading">
+              <span class="stack-card__line-wrap"><span class="stack-card__line">Nuestro</span></span>
+              <span class="stack-card__line-wrap"><span class="stack-card__line stack-card__line--italic">Café</span></span>
+            </h2>
+            <p class="stack-card__body">Granos de origen único, extraídos con precisión milimétrica. Sin atajos, sin compromiso.</p>
+          </div>
+          <div class="stack-card__number" aria-hidden="true">02</div>
+        </div>
+      </div>
+
+      <div class="stack-card" data-card="3">
+        <div class="stack-card__inner">
+          <img
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=80"
+            alt="Nuestro Espacio"
+            class="stack-card__bg"
+            loading="lazy">
+          <div class="stack-card__overlay"></div>
+          <div class="stack-card__content">
+            <div class="stack-card__overline">
+              <span>03</span>
+            </div>
+            <h2 class="stack-card__heading">
+              <span class="stack-card__line-wrap"><span class="stack-card__line">Nuestro</span></span>
+              <span class="stack-card__line-wrap"><span class="stack-card__line stack-card__line--italic">Espacio</span></span>
+            </h2>
+            <p class="stack-card__body">Un rincón cálido dentro del corazón de Guadalajara. El lugar perfecto para detenerte.</p>
+          </div>
+          <div class="stack-card__number" aria-hidden="true">03</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MENU — Horizontal Scroll -->
+    <section class="section section--menu" id="menu">
+      <div class="menu__header">
+        <div class="menu__header-inner">
+          <span class="section-label" data-anim="clip-fade">Lo que hacemos bien</span>
+          <h2 class="section-heading" data-anim="heading-wipe">
+            <span class="heading-line">Nuestro</span>
+            <em class="heading-line">Menú</em>
+          </h2>
+        </div>
+      </div>
+      <div class="menu__track-wrap">
+        <div class="menu__track" id="menu-track">
+
+          <article class="menu-card" data-tilt>
+            <div class="menu-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=600&q=80" alt="Espresso" class="menu-card__img" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Espresso</h3>
+                <span class="menu-card__price">$45</span>
+              </div>
+              <p class="menu-card__desc">Doble shot, intenso y equilibrado. Nuestro blend estrella.</p>
+            </div>
+          </article>
+
+          <article class="menu-card" data-tilt>
+            <div class="menu-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&q=80" alt="Latte" class="menu-card__img" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Latte</h3>
+                <span class="menu-card__price">$65</span>
+              </div>
+              <p class="menu-card__desc">Espresso con leche texturizada a 65°C. Suave y cremoso.</p>
+            </div>
+          </article>
+
+          <article class="menu-card" data-tilt>
+            <div class="menu-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Cold Brew" class="menu-card__img" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Cold Brew</h3>
+                <span class="menu-card__price">$70</span>
+              </div>
+              <p class="menu-card__desc">18 horas de extracción en frío. Oscuro, limpio y refrescante.</p>
+            </div>
+          </article>
+
+          <article class="menu-card" data-tilt>
+            <div class="menu-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80" alt="Cappuccino" class="menu-card__img" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Cappuccino</h3>
+                <span class="menu-card__price">$60</span>
+              </div>
+              <p class="menu-card__desc">Espresso, leche y espuma en perfecta proporción italiana.</p>
+            </div>
+          </article>
+
+          <article class="menu-card" data-tilt>
+            <div class="menu-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=600&q=80" alt="Matcha Latte" class="menu-card__img" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Matcha Latte</h3>
+                <span class="menu-card__price">$75</span>
+              </div>
+              <p class="menu-card__desc">Ceremonial grade desde Uji, Japón. Terroso y profundo.</p>
+            </div>
+          </article>
+
+          <article class="menu-card" data-tilt>
+            <div class="menu-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80" alt="Croissant" class="menu-card__img" loading="lazy">
+            </div>
+            <div class="menu-card__body">
+              <div class="menu-card__top">
+                <h3 class="menu-card__title">Croissant</h3>
+                <span class="menu-card__price">$55</span>
+              </div>
+              <p class="menu-card__desc">Hojaldrado, mantequilloso y crujiente. Recién horneado.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PARALLAX GALLERY -->
+    <section class="section section--gallery" id="gallery">
+      <div class="gallery__header">
+        <h2 class="gallery__heading" data-anim="heading-wipe">
+          <span>La</span> <em>Atmósfera</em>
+        </h2>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__col gallery__col--left" data-parallax="-0.12">
+          <div class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80" alt="Interior del café" loading="lazy">
+            </div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80" alt="Granos de café" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="gallery__col gallery__col--center" data-parallax="-0.22">
+          <div class="gallery__item gallery__item--tall">
+            <div class="gallery__img-wrap">
+              <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80" alt="Barista trabajando" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="gallery__col gallery__col--right" data-parallax="0.08">
+          <div class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Café con luz natural" loading="lazy">
+            </div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80" alt="Taza de café" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ABOUT -->
+    <section class="section section--about" id="about">
+      <div class="about__inner">
+        <div class="about__statement">
+          <p class="about__big-text" id="about-scrub-text">
+            Creemos que el café no es solo una bebida — es un ritual, una pausa, un momento de claridad en un mundo que nunca se detiene.
+          </p>
+        </div>
+        <div class="about__split">
+          <div class="about__img-col" data-anim="slide-right">
+            <div class="about__img-wrap">
+              <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80" alt="Sobre Nato's Café" loading="lazy">
+            </div>
+          </div>
+          <div class="about__text-col" data-anim="fade-up">
+            <span class="section-label">Nuestra Historia</span>
+            <p class="about__body">Desde 2019 en el corazón de Guadalajara, Nato's Café nació con la convicción de que el café de especialidad debe ser accesible, cálido y sin pretensiones.</p>
+            <p class="about__body">Cada taza que sirves lleva consigo la historia de los productores que cultivaron los granos, el barista que los extrajo, y el lugar donde los disfrutaste.</p>
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-num" data-count="244">0</span>
+                <span class="about__stat-label">Reseñas</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-num" data-count-decimal="4.5">0</span>
+                <span class="about__stat-label">Estrellas</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-num" data-count="5">0</span>
+                <span class="about__stat-num-plus">+</span>
+                <span class="about__stat-label">Años</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn--outline btn-magnetic" data-scroll-to="contact">
+              <span>Encuéntranos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <h2 class="contact__heading" data-anim="heading-wipe">
+            <span>Ven a</span>
+            <em>Visitarnos</em>
+          </h2>
+
+          <div class="contact__details" data-anim="stagger">
+            <div class="contact__detail">
+              <span class="contact__detail-label">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                Dirección
+              </span>
+              <span class="contact__detail-value">Av. Fray Antonio Alcalde 1043<br>Artesanos, 44200 Guadalajara, Jal.<br><em>Piso 0 · Cinépolis La Normal</em></span>
+            </div>
+
+            <div class="contact__detail">
+              <span class="contact__detail-label">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" fill="currentColor"/></svg>
+                Horario
+              </span>
+              <span class="contact__detail-value">Lunes – Viernes: 8am – 9:30pm<br>Sábado – Domingo: 9am – 9:30pm</span>
+            </div>
+
+            <div class="contact__detail">
+              <span class="contact__detail-label">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                Teléfono
+              </span>
+              <a href="tel:3313068655" class="contact__detail-value contact__detail-link">33 1306 8655</a>
+            </div>
+
+            <div class="contact__detail">
+              <span class="contact__detail-label">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/></svg>
+                Instagram
+              </span>
+              <a href="https://instagram.com/natoscafes" class="contact__detail-value contact__detail-link" target="_blank" rel="noopener">@natoscafes</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__map-col" data-anim="fade-up">
+          <div class="contact__map-wrap">
+            <iframe
+              title="Ubicación Nato's Café"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.9!2d-103.3515!3d20.6826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae4b1b1b1b1b%3A0x0!2sAv.+Fray+Antonio+Alcalde+1043%2C+Artesanos%2C+44200+Guadalajara%2C+Jal.!5e0!3m2!1ses!2smx!4v1700000000000"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <div class="contact__map-caption">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="currentColor"/></svg>
+            Av. Fray Antonio Alcalde 1043 · Cinépolis La Normal
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__logo">N·C</span>
+      <span class="footer__copy">© 2025 Nato's Café · Guadalajara, Jalisco</span>
+      <a href="https://instagram.com/natoscafes" class="footer__insta" target="_blank" rel="noopener">@natoscafes</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
