@@ -89,7 +89,7 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <div ref={bgRef} className="absolute inset-0 w-full h-[120%] -top-[10%]">
           <Image
-            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1800&q=80"
+            src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=1800&q=80"
             alt=""
             fill
             className="object-cover"
@@ -98,6 +98,16 @@ export default function Hero() {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/55 to-bg/85" />
+
+        {/* Steam wisps — ambient heat rising over the trompo */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+          <span className="steam-wisp absolute left-[18%] bottom-[40%] w-16 h-20 rounded-full bg-saffron/15 blur-2xl" style={{ animationDelay: '0s' }} />
+          <span className="steam-wisp absolute left-[32%] bottom-[36%] w-20 h-24 rounded-full bg-accent/15 blur-2xl" style={{ animationDelay: '1.2s' }} />
+          <span className="steam-wisp absolute left-[46%] bottom-[42%] w-12 h-16 rounded-full bg-saffron/12 blur-2xl" style={{ animationDelay: '2.4s' }} />
+          <span className="steam-wisp absolute left-[62%] bottom-[38%] w-20 h-24 rounded-full bg-accent/12 blur-2xl" style={{ animationDelay: '0.6s' }} />
+          <span className="steam-wisp absolute left-[78%] bottom-[44%] w-14 h-18 rounded-full bg-saffron/14 blur-2xl" style={{ animationDelay: '3.0s' }} />
+          <span className="steam-wisp absolute left-[10%] bottom-[48%] w-10 h-14 rounded-full bg-chile/10 blur-2xl" style={{ animationDelay: '4.1s' }} />
+        </div>
       </div>
 
       {/* Content */}
@@ -115,13 +125,13 @@ export default function Hero() {
           style={{ fontSize: 'var(--fs-hero)' }}
         >
           <span className="block overflow-hidden">
-            <span ref={line1Ref} className="block" style={{ transform: 'translateY(110%)' }}>El café</span>
+            <span ref={line1Ref} className="block" style={{ transform: 'translateY(110%)' }}>Los tacos</span>
           </span>
           <span className="block overflow-hidden">
-            <span ref={line2Ref} className="block italic text-accent" style={{ transform: 'translateY(110%)' }}>que buscabas</span>
+            <span ref={line2Ref} className="block italic text-accent" style={{ transform: 'translateY(110%)' }}>que siempre</span>
           </span>
           <span className="block overflow-hidden">
-            <span ref={line3Ref} className="block" style={{ transform: 'translateY(110%)' }}>todo este tiempo.</span>
+            <span ref={line3Ref} className="block" style={{ transform: 'translateY(110%)' }}>soñaste probar.</span>
           </span>
         </h1>
 

@@ -5,46 +5,46 @@ import Image from 'next/image'
 
 const menuItems = [
   {
-    name: 'Espresso',
+    name: 'Al Pastor',
+    price: '$28',
+    desc: 'Cerdo marinado en achiote y guajillo, cortado al trompo. Con piña, cebolla y cilantro.',
+    src: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&q=80',
+    alt: 'Taco al pastor con piña',
+  },
+  {
+    name: 'Suadero',
+    price: '$32',
+    desc: 'Res confitada en su propia grasa, dorada en el comal. Suave por dentro, crujiente en los bordes.',
+    src: 'https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=600&q=80',
+    alt: 'Taco de suadero dorado',
+  },
+  {
+    name: 'Tripa',
+    price: '$35',
+    desc: 'Tripa de res crujiente, dorada al carbón. Para valientes, con limón y sal de gusano.',
+    src: 'https://images.unsplash.com/photo-1624300629298-e9de39c13be5?w=600&q=80',
+    alt: 'Taco de tripa crujiente',
+  },
+  {
+    name: 'Asada',
+    price: '$38',
+    desc: 'Arrachera marinada y asada al carbón. Guacamole molcajeteado y cebolla tatemada.',
+    src: 'https://images.unsplash.com/photo-1565299715199-866c917206bb?w=600&q=80',
+    alt: 'Taco de carne asada',
+  },
+  {
+    name: 'Campechano',
+    price: '$42',
+    desc: 'La mezcla perfecta: pastor y suadero juntos, con un toque de chicharrón.',
+    src: 'https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=600&q=80',
+    alt: 'Taco campechano',
+  },
+  {
+    name: 'Cochinita',
     price: '$45',
-    desc: 'Doble shot, intenso y equilibrado. Nuestro blend estrella.',
-    src: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=600&q=80',
-    alt: 'Espresso',
-  },
-  {
-    name: 'Latte',
-    price: '$65',
-    desc: 'Espresso con leche texturizada a 65°C. Suave y cremoso.',
-    src: 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=600&q=80',
-    alt: 'Latte',
-  },
-  {
-    name: 'Cold Brew',
-    price: '$70',
-    desc: '18 horas de extracción en frío. Oscuro, limpio y refrescante.',
-    src: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80',
-    alt: 'Cold Brew',
-  },
-  {
-    name: 'Cappuccino',
-    price: '$60',
-    desc: 'Espresso, leche y espuma en perfecta proporción italiana.',
-    src: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80',
-    alt: 'Cappuccino',
-  },
-  {
-    name: 'Matcha Latte',
-    price: '$75',
-    desc: 'Ceremonial grade desde Uji, Japón. Terroso y profundo.',
-    src: 'https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=600&q=80',
-    alt: 'Matcha Latte',
-  },
-  {
-    name: 'Croissant',
-    price: '$55',
-    desc: 'Hojaldrado, mantequilloso y crujiente. Recién horneado.',
-    src: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80',
-    alt: 'Croissant',
+    desc: 'Cerdo yucateco en achiote y naranja agria, cocido en hoja de plátano. Cebolla morada en vinagre.',
+    src: 'https://images.unsplash.com/photo-1618040996337-11e27f8c5d94?w=600&q=80',
+    alt: 'Taco de cochinita pibil',
   },
 ]
 
@@ -139,14 +139,14 @@ export default function MenuSection() {
       {/* Header */}
       <div className="max-w-[var(--container)] mx-auto px-[var(--pad)] pt-24 pb-12">
         <span className="block font-body text-xs-f tracking-[0.25em] uppercase text-accent mb-4">
-          Lo que hacemos bien
+          Lo que servimos
         </span>
         <h2
           className="font-display font-light leading-[0.95] text-text"
           style={{ fontSize: 'var(--fs-3xl)' }}
         >
-          <span className="block">Nuestro</span>
-          <em className="block text-accent">Menú</em>
+          <span className="block">Nuestros</span>
+          <em className="block text-accent">Tacos</em>
         </h2>
       </div>
 
@@ -162,10 +162,12 @@ export default function MenuSection() {
               key={i}
               ref={el => { cardRefs.current[i] = el }}
               className="
+                menu-card
                 flex-shrink-0 w-[clamp(240px,28vw,340px)]
                 bg-bg-card rounded-2xl border border-white/5
                 overflow-hidden will-change-transform
-                hover:border-accent/30 transition-colors duration-300
+                hover:border-accent/40 transition-[border-color,box-shadow] duration-500
+                hover:shadow-[0_0_48px_rgba(240,122,43,0.22)]
               "
               style={{ transformStyle: 'preserve-3d', perspective: '900px' }}
             >
@@ -184,7 +186,28 @@ export default function MenuSection() {
               <div className="p-6">
                 <div className="flex justify-between items-baseline mb-2">
                   <h3 className="font-display text-xl-f font-normal text-text">{item.name}</h3>
-                  <span className="font-display text-lg-f text-accent font-light">{item.price}</span>
+                  <span className="relative font-display text-lg-f text-saffron font-light">
+                    {/* Flame behind price — visible on hover via .menu-card:hover .flame-wrap */}
+                    <span
+                      className="flame-wrap absolute -inset-x-2 -inset-y-1 flex items-center justify-center pointer-events-none"
+                      aria-hidden="true"
+                    >
+                      <svg viewBox="0 0 32 40" className="w-full h-full" preserveAspectRatio="none">
+                        <defs>
+                          <radialGradient id={`flame-grad-${i}`} cx="50%" cy="70%" r="60%">
+                            <stop offset="0%"  stopColor="#f5b841" stopOpacity="0.9" />
+                            <stop offset="55%" stopColor="#f07a2b" stopOpacity="0.65" />
+                            <stop offset="100%" stopColor="#c8321a" stopOpacity="0" />
+                          </radialGradient>
+                        </defs>
+                        <path
+                          d="M16 2 C20 10 27 14 26 24 C25 33 19 38 16 38 C13 38 7 33 6 24 C5 14 12 10 16 2 Z"
+                          fill={`url(#flame-grad-${i})`}
+                        />
+                      </svg>
+                    </span>
+                    <span className="relative">{item.price}</span>
+                  </span>
                 </div>
                 <p className="font-body text-sm-f text-text-muted leading-relaxed">{item.desc}</p>
               </div>

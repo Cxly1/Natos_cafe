@@ -8,25 +8,25 @@ const cards = [
     num: '01',
     title: 'Nuestra',
     titleItalic: 'Historia',
-    body: 'Nacimos en Guadalajara con una sola obsesión: el café perfecto. Desde 2019, cada taza es un acto de amor.',
-    src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80',
-    alt: 'Historia de Nato\'s Café',
+    body: 'Desde 2013 en una esquina de Guadalajara. La receta del abuelo, el carbón bien prendido y la tortilla recién hecha. Nada de atajos.',
+    src: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=1600&q=80',
+    alt: 'Historia de El Jefe Tacos',
   },
   {
     num: '02',
-    title: 'Nuestro',
-    titleItalic: 'Café',
-    body: 'Granos de origen único, extraídos con precisión milimétrica. Sin atajos, sin compromiso.',
-    src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1600&q=80',
-    alt: 'Nuestro café de especialidad',
+    title: 'Nuestros',
+    titleItalic: 'Tacos',
+    body: 'Trompo de pastor girando desde las 6 de la tarde. Adobo de achiote, chile guajillo y piña fresca al corte. Sin atajos, sin compromiso.',
+    src: 'https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=1600&q=80',
+    alt: 'Trompo de pastor al carbón',
   },
   {
     num: '03',
-    title: 'Nuestro',
-    titleItalic: 'Espacio',
-    body: 'Un rincón cálido dentro del corazón de Guadalajara. El lugar perfecto para detenerte.',
-    src: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=80',
-    alt: 'Espacio de Nato\'s Café',
+    title: 'Nuestras',
+    titleItalic: 'Salsas',
+    body: 'Seis salsas hechas en molcajete cada mañana. De la verde cruda a la roja tatemada. Seis niveles, seis personalidades. Pruébalas todas.',
+    src: 'https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=1600&q=80',
+    alt: 'Salsas en molcajete',
   },
 ]
 
@@ -157,7 +157,7 @@ export default function CardStack() {
           {/* Large background number */}
           <div
             className="absolute top-[var(--nav-h)] right-[var(--pad)] font-display font-light leading-none select-none pointer-events-none"
-            style={{ fontSize: 'clamp(6rem, 14vw, 16rem)', color: 'rgba(200,169,126,0.06)' }}
+            style={{ fontSize: 'clamp(6rem, 14vw, 16rem)', color: 'rgba(240,122,43,0.08)' }}
             aria-hidden="true"
           >
             {card.num}

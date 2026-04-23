@@ -6,12 +6,12 @@ import MagneticButton from '@/components/ui/MagneticButton'
 import { useLenis } from '@/hooks/useLenis'
 
 const STATEMENT =
-  'Creemos que el café no es solo una bebida — es un ritual, una pausa, un momento de claridad en un mundo que nunca se detiene.'
+  'Creemos que un taco no es solo comida — es un ritual de barrio, una esquina llena de humo, un momento donde la ciudad se detiene a cenar.'
 
 const stats = [
-  { label: 'Reseñas',   value: 244,  decimal: false },
-  { label: 'Estrellas', value: 4.5,  decimal: true  },
-  { label: 'Años',      value: 5,    decimal: false, plus: true },
+  { label: 'Reseñas',   value: 812,  decimal: false },
+  { label: 'Estrellas', value: 4.8,  decimal: true  },
+  { label: 'Años',      value: 12,   decimal: false, plus: true },
 ]
 
 export default function About() {
@@ -133,8 +133,8 @@ export default function About() {
           <div ref={imgRef} style={{ opacity: 0 }}>
             <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: '3/4' }}>
               <Image
-                src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
-                alt="Sobre Nato's Café"
+                src="https://images.unsplash.com/photo-1562059390-a761a084768e?w=800&q=80"
+                alt="El taquero trabajando en el comal"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700 ease-expo"
                 loading="lazy"
@@ -146,15 +146,15 @@ export default function About() {
           {/* Text */}
           <div ref={textRef} className="py-8 lg:py-16" style={{ opacity: 0 }}>
             <span className="block font-body text-xs-f tracking-[0.25em] uppercase text-accent mb-6">
-              Nuestra Historia
+              Taquería de barrio · 2013
             </span>
             <p className="font-body text-sm-f text-text-muted leading-relaxed mb-6">
-              Desde 2019 en el corazón de Guadalajara, Nato&apos;s Café nació con la convicción de
-              que el café de especialidad debe ser accesible, cálido y sin pretensiones.
+              Desde 2013 en una esquina de Guadalajara, El Jefe Tacos nació con la receta del abuelo
+              y una obsesión sencilla: honrar al taco. Carne fresca, tortilla recién hecha, salsa tatemada.
             </p>
             <p className="font-body text-sm-f text-text-muted leading-relaxed mb-10">
-              Cada taza que sirves lleva consigo la historia de los productores que cultivaron los
-              granos, el barista que los extrajo, y el lugar donde los disfrutaste.
+              Aquí todo se hace a la antigua — masa nixtamalizada, carbón real encendido desde la tarde,
+              salsas de molcajete cada mañana. Doce años después, la esquina sigue llena cada noche.
             </p>
 
             {/* Stats */}

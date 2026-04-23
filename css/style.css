@@ -3,15 +3,17 @@
 ============================================================ */
 :root {
   /* Colors */
-  --bg:           #0a0806;
-  --bg-2:         #150f0a;
-  --bg-card:      #1a1108;
-  --accent:       #c8a97e;
-  --accent-dim:   #8a6a45;
-  --accent-dark:  #3d2e1a;
-  --text:         #f5f0ea;
-  --text-muted:   #9a8e82;
-  --border:       rgba(200, 169, 126, 0.12);
+  --bg:           #130a05;
+  --bg-2:         #1d1008;
+  --bg-card:      #24150b;
+  --accent:       #f07a2b;
+  --accent-dim:   #b9521f;
+  --accent-dark:  #5a2814;
+  --text:         #f6ead3;
+  --text-muted:   #a8927a;
+  --border:       rgba(240, 122, 43, 0.14);
+  --saffron:      #f5b841;
+  --chile:        #c8321a;
 
   /* Typography */
   --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -249,7 +251,7 @@ em { font-style: italic; }
 }
 
 .nav.is-scrolled {
-  background: rgba(10, 8, 6, 0.88);
+  background: rgba(19, 10, 5, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-color: var(--border);
@@ -510,9 +512,9 @@ em { font-style: italic; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 8, 6, 0.3) 0%,
-    rgba(10, 8, 6, 0.55) 60%,
-    rgba(10, 8, 6, 0.85) 100%
+    rgba(19, 10, 5, 0.3) 0%,
+    rgba(19, 10, 5, 0.55) 60%,
+    rgba(19, 10, 5, 0.85) 100%
   );
 }
 
@@ -707,9 +709,9 @@ em { font-style: italic; }
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(10, 8, 6, 0.7) 0%,
-    rgba(10, 8, 6, 0.3) 50%,
-    rgba(10, 8, 6, 0.6) 100%
+    rgba(19, 10, 5, 0.7) 0%,
+    rgba(19, 10, 5, 0.3) 50%,
+    rgba(19, 10, 5, 0.6) 100%
   );
 }
 
@@ -771,7 +773,7 @@ em { font-style: italic; }
   font-family: var(--font-display);
   font-size: clamp(6rem, 12vw, 14rem);
   font-weight: 300;
-  color: rgba(200, 169, 126, 0.07);
+  color: rgba(240, 122, 43, 0.07);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -817,7 +819,7 @@ em { font-style: italic; }
 }
 
 .menu-card:hover {
-  border-color: rgba(200, 169, 126, 0.3);
+  border-color: rgba(240, 122, 43, 0.3);
 }
 
 .menu-card__img-wrap {

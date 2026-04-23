@@ -129,7 +129,7 @@ html.lenis          { height: auto; }
   position: absolute;
   bottom: 0; left: 0;
   width: 100%; height: 1px;
-  background: #c8a97e;
+  background: #f07a2b;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s var(--ease-expo);
@@ -145,7 +145,7 @@ html.lenis          { height: auto; }
   content: '';
   position: absolute;
   inset: 0;
-  background: #f5f0ea;
+  background: #f6ead3;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.45s var(--ease-expo);

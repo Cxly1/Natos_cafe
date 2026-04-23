@@ -77,10 +77,22 @@ export default function Nav() {
           {/* Logo */}
           <button
             onClick={() => scrollTo('hero')}
-            className="font-display text-[1.8rem] font-normal text-accent tracking-wide flex items-center gap-[0.05em]"
-            aria-label="Nato's Café inicio"
+            className="font-display text-[1.8rem] font-normal text-accent tracking-wide flex items-center gap-[0.1em] group"
+            aria-label="El Jefe Tacos inicio"
           >
-            N<span className="text-text-muted text-[0.6em]">·</span>C
+            E
+            <span className="text-saffron inline-flex transition-transform duration-500 ease-back group-hover:rotate-180" aria-hidden="true">
+              <svg viewBox="0 0 24 24" className="w-[0.7em] h-[0.7em]" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2.5 L10.5 4.5 L13.5 4.5 Z" fill="currentColor" />
+                <path d="M12 4.5 L12 6" />
+                <path d="M7 7 L17 7 L14.5 19 L9.5 19 Z" fill="currentColor" opacity="0.85" />
+                <path d="M8 10 L16 10" stroke="#130a05" strokeWidth="0.8" />
+                <path d="M8.3 13 L15.7 13" stroke="#130a05" strokeWidth="0.8" />
+                <path d="M8.7 16 L15.3 16" stroke="#130a05" strokeWidth="0.8" />
+                <path d="M9 19 L15 19 L14.2 21 L9.8 21 Z" fill="currentColor" />
+              </svg>
+            </span>
+            J
           </button>
 
           {/* Desktop links */}
@@ -141,7 +153,7 @@ export default function Nav() {
         </nav>
 
         <div className="absolute bottom-10 left-[var(--pad)] right-[var(--pad)] flex justify-between text-xs-f text-text-muted tracking-widest">
-          <span>@natoscafes</span>
+          <span>@eljefetacos</span>
           <span>Guadalajara, Jalisco</span>
         </div>
       </div>

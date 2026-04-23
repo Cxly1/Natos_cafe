@@ -5,12 +5,12 @@ import { useEffect, useRef } from 'react'
 const details = [
   {
     label: 'Dirección',
-    content: 'Av. Fray Antonio Alcalde 1043\nArtesanos, 44200 Guadalajara, Jal.\nPiso 0 · Cinépolis La Normal',
+    content: 'Av. Fray Antonio Alcalde 1043\nArtesanos, 44200 Guadalajara, Jal.\nEsquina con La Normal',
     isLink: false,
   },
   {
     label: 'Horario',
-    content: 'Lun–Vie: 8am – 9:30pm\nSáb–Dom: 9am – 9:30pm',
+    content: 'Mar–Dom: 2pm – 1am\nLunes: cerrado',
     isLink: false,
   },
   {
@@ -21,8 +21,8 @@ const details = [
   },
   {
     label: 'Instagram',
-    content: '@natoscafes',
-    href: 'https://instagram.com/natoscafes',
+    content: '@eljefetacos',
+    href: 'https://instagram.com/eljefetacos',
     isLink: true,
     external: true,
   },
@@ -137,7 +137,7 @@ export default function Contact() {
               style={{ height: 'clamp(300px, 50vh, 500px)' }}
             >
               <iframe
-                title="Ubicación Nato's Café"
+                title="Ubicación El Jefe Tacos"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.972!2d-103.354!3d20.6832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae4b8ea5d37b%3A0x0!2sAv.%20Fray%20Antonio%20Alcalde%201043%2C%20Artesanos%2C%2044200%20Guadalajara%2C%20Jal.!5e0!3m2!1ses!2smx!4v1700000000000"
                 width="100%"
                 height="100%"
@@ -155,7 +155,7 @@ export default function Contact() {
               <svg viewBox="0 0 24 24" className="w-4 h-4 text-accent shrink-0" fill="currentColor" aria-hidden="true">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
               </svg>
-              Av. Fray Antonio Alcalde 1043 · Cinépolis La Normal
+              Av. Fray Antonio Alcalde 1043 · Esquina con La Normal
             </p>
           </div>
         </div>

@@ -8,15 +8,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg:           '#0a0806',
-        'bg-2':       '#150f0a',
-        'bg-card':    '#1a1108',
-        accent:       '#c8a97e',
-        'accent-dim': '#8a6a45',
-        'accent-dark':'#3d2e1a',
-        text:         '#f5f0ea',
-        'text-muted': '#9a8e82',
-        border:       'rgba(200,169,126,0.12)',
+        bg:           '#130a05',
+        'bg-2':       '#1d1008',
+        'bg-card':    '#24150b',
+        accent:       '#f07a2b',
+        'accent-dim': '#b9521f',
+        'accent-dark':'#5a2814',
+        text:         '#f6ead3',
+        'text-muted': '#a8927a',
+        border:       'rgba(240,122,43,0.14)',
+        saffron:      '#f5b841',
+        chile:        '#c8321a',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

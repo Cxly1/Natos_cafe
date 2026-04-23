@@ -1,7 +1,7 @@
 import MarqueeRow from '@/components/ui/MarqueeRow'
 
-const ROW_1 = ['Café Especial', 'Espresso', 'Latte', 'Cold Brew', 'Guadalajara']
-const ROW_2 = ['@natoscafes', 'Cappuccino', 'Matcha', 'Frappé', 'Croissant']
+const ROW_1 = ['Al Pastor', 'Suadero', 'Tripa', 'Asada', 'Guadalajara']
+const ROW_2 = ['@eljefetacos', 'Campechano', 'Cochinita', 'Salsa de Molcajete', 'Tortilla a Mano']
 
 export default function MarqueeStrip() {
   return (

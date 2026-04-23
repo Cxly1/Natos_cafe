@@ -4,15 +4,15 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 const colLeft = [
-  { src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80', alt: 'Interior del café', aspect: '4/3' },
-  { src: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80', alt: 'Granos de café',    aspect: '4/3' },
+  { src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80', alt: 'Interior de la taquería', aspect: '4/3' },
+  { src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80', alt: 'Manos prensando tortilla', aspect: '4/3' },
 ]
 const colCenter = [
-  { src: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80', alt: 'Barista trabajando', aspect: '3/4.5' },
+  { src: 'https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=800&q=80', alt: 'Trompo de pastor al fuego', aspect: '3/4.5' },
 ]
 const colRight = [
-  { src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80', alt: 'Café con luz natural', aspect: '4/3' },
-  { src: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800&q=80', alt: 'Taza de café',         aspect: '4/3' },
+  { src: 'https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=800&q=80', alt: 'Salsa en molcajete', aspect: '4/3' },
+  { src: 'https://images.unsplash.com/photo-1506368083636-6defb67639a7?w=800&q=80', alt: 'Limones y chiles',   aspect: '4/3' },
 ]
 
 function GalleryImage({ src, alt, aspect }: { src: string; alt: string; aspect: string }) {
@@ -112,7 +112,7 @@ export default function Gallery() {
             className="font-display font-light text-text leading-[1] overflow-hidden"
             style={{ fontSize: 'var(--fs-3xl)', clipPath: 'inset(0 100% 0 0)' }}
           >
-            La <em className="text-accent">Atmósfera</em>
+            La <em className="text-accent">Taquería</em>
           </h2>
         </div>
 

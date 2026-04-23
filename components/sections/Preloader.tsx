@@ -28,10 +28,20 @@ export default function Preloader() {
 
       // Set initial states
       gsap.set([letterNRef.current, letterCRef.current], { y: 60, opacity: 0, skewY: 6 })
-      gsap.set(dotRef.current,     { scale: 0, opacity: 0 })
+      gsap.set(dotRef.current,     { scale: 0, opacity: 0, rotate: 0 })
       gsap.set(taglineRef.current, { y: 10, opacity: 0 })
       gsap.set(barRef.current,     { width: '0%' })
       gsap.set(maskRef.current,    { yPercent: 0 })
+
+      // Trompo spin — runs in parallel, will be killed when element unmounts
+      if (dotRef.current) {
+        gsap.to(dotRef.current, {
+          rotate: 360,
+          duration: 2.6,
+          ease: 'none',
+          repeat: -1,
+        })
+      }
 
       tl
         // Letters slide in
@@ -98,17 +108,44 @@ export default function Preloader() {
     >
       {/* Logo */}
       <div className="text-center">
-        <div className="font-display text-[clamp(4rem,10vw,9rem)] font-light text-accent leading-none tracking-widest flex items-center gap-[0.05em]">
-          <span ref={letterNRef} style={{ opacity: 0 }}>N</span>
-          <span ref={dotRef}     style={{ opacity: 0 }} className="text-text-muted text-[0.5em]">·</span>
-          <span ref={letterCRef} style={{ opacity: 0 }}>C</span>
+        <div className="font-display text-[clamp(4rem,10vw,9rem)] font-light text-accent leading-none tracking-widest flex items-center gap-[0.08em]">
+          <span ref={letterNRef} style={{ opacity: 0 }}>E</span>
+          <span
+            ref={dotRef}
+            style={{ opacity: 0, display: 'inline-block' }}
+            className="text-saffron"
+            aria-hidden="true"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="w-[0.55em] h-[0.55em]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {/* piña top */}
+              <path d="M12 2.5 L10.5 4.5 L13.5 4.5 Z" fill="currentColor" />
+              <path d="M12 4.5 L12 6" />
+              {/* trompo cone */}
+              <path d="M7 7 L17 7 L14.5 19 L9.5 19 Z" fill="currentColor" opacity="0.85" />
+              {/* stripes */}
+              <path d="M8 10 L16 10" stroke="#130a05" strokeWidth="0.8" />
+              <path d="M8.3 13 L15.7 13" stroke="#130a05" strokeWidth="0.8" />
+              <path d="M8.7 16 L15.3 16" stroke="#130a05" strokeWidth="0.8" />
+              {/* base */}
+              <path d="M9 19 L15 19 L14.2 21 L9.8 21 Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span ref={letterCRef} style={{ opacity: 0 }}>J</span>
         </div>
         <p
           ref={taglineRef}
           style={{ opacity: 0 }}
           className="font-body text-xs-f tracking-[0.3em] uppercase text-text-muted mt-4"
         >
-          Café de Especialidad
+          Taquería Tradicional
         </p>
       </div>
 
